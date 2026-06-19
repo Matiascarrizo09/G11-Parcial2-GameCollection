@@ -23,7 +23,7 @@ const Usuario = sequelize.define("Usuario", {
     unique: true,
   },
   mensaje: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.TEXT,
   },
   fechaRegistro: {
     type: DataTypes.DATE,

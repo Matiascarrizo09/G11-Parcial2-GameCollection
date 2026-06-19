@@ -39,3 +39,5 @@ const Juego = sequelize.define("Juego", {
     defaultValue: false,
   },
 });
+
+module.exports = Juego;

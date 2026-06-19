@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../src/config/database");
 
 const Coleccion = sequelize.define("Coleccion", {
-  id: {
+  idColeccion: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,

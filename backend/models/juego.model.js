@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../src/config/database");
 
 const Juego = sequelize.define("Juego", {
-  id: {
+  idJuego: {
     type: DataTypes.INTEGER, // número entero
     primaryKey: true, // establecer como primary key
     autoIncrement: true, // aumenta automaticamente, evitando ids iguales

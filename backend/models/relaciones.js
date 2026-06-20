@@ -25,7 +25,10 @@ Usuarios.hasMany(Colecciones, {
 
 // Colecciones N---1 Usuarios
 Colecciones.belongsTo(Usuarios, {
-  foreignKey: "idUsuario",
+  foreignKey: {
+    name: "idUsuario",
+    allowNull: false,
+  },
 });
 
 // Colecciones N---M juegos

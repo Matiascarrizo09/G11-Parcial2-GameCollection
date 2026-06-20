@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const gameRoutes = require('./gameRoutes');
-const userRoutes = require('./userRoutes');
-const collectionRoutes = require('./collectionRoutes');
+const juegoRoutes = require('./juego.routes');
+const usuarioRoutes = require('./usuario.routes');
+const coleccionRoutes = require('./coleccion.routes');
 
-router.use('/games', gameRoutes);
-router.use('/users', userRoutes);
-router.use('/collections', collectionRoutes);
+router.use('/juegos', juegoRoutes);
+router.use('/usuarios', usuarioRoutes);
+router.use('/colecciones', coleccionRoutes);
 
 module.exports = router;

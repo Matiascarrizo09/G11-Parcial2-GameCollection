@@ -1,15 +1,21 @@
 const Juegos = require("./juego.model.js");
 const Usuarios = require("./usuario.model.js");
-const Colecciones = require("./usuario.model.js");
+const Colecciones = require("./coleccion.model.js");
 
 // Usuarios 1------N Juegos
 Usuarios.hasMany(Juegos, {
-  foreignKey: "idUsuario",
+  foreignKey: {
+    name: "idUsuario",
+    allowNull: false,
+  },
 });
 
 // Juegos N--------1 Usuarios
 Juegos.belongsTo(Usuarios, {
-  foreignKey: "idJuego",
+  foreignKey: {
+    name: "idUsuario",
+    allowNull: false,
+  },
 });
 
 // Usuarios 1------N Colecciones
@@ -19,17 +25,17 @@ Usuarios.hasMany(Colecciones, {
 
 // Colecciones N---1 Usuarios
 Colecciones.belongsTo(Usuarios, {
-  foreignKey: "idColeccion",
+  foreignKey: "idUsuario",
 });
 
 // Colecciones N---M juegos
 Colecciones.belongsToMany(Juegos, {
-  through: JuegoColeccion,
+  through: "JuegoColeccion",
 });
 
 // Juegos N--------M Colecciones
 Juegos.belongsToMany(Colecciones, {
-  through: JuegoColeccion,
+  through: "JuegoColeccion",
 });
 
 module.exports = {

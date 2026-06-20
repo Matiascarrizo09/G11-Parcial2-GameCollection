@@ -12,7 +12,7 @@ const Usuario = sequelize.define("Usuario", {
     allowNull: false,
     unique: true,
   },
-  contraseña: {
+  contrasenia: {
     type: DataTypes.STRING(50),
     allowNull: false,
     unique: true,
@@ -20,7 +20,6 @@ const Usuario = sequelize.define("Usuario", {
   email: {
     type: DataTypes.STRING(50),
     allowNull: false,
-    unique: true,
   },
   mensaje: {
     type: DataTypes.TEXT,
@@ -34,7 +33,9 @@ const Usuario = sequelize.define("Usuario", {
     type: DataTypes.DECIMAL(6, 1),
     allowNull: false,
     defaultValue: 0.0,
-    min: 0.0,
+    validate: {
+      min: 0.0,
+    },
   },
 });
 

@@ -3,6 +3,11 @@ require('dotenv').config();
 const app = require('./src/app');
 const sequelize = require('./src/config/database');
 
+require('./models/usuario.model');
+require('./models/juego.model');
+require('./models/coleccion.model');
+require('./models/relaciones');
+
 const PORT = process.env.PORT || 3000;
 
 async function startServer() {
@@ -22,5 +27,7 @@ async function startServer() {
     console.error('Error al iniciar:', error);
   }
 }
+
+
 
 startServer();

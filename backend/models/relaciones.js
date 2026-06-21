@@ -24,13 +24,14 @@ Colecciones.belongsTo(Usuarios, {
 
 // Colecciones N---M juegos
 Colecciones.belongsToMany(Juegos, {
-  through: JuegoColeccion,
+  through: "JuegoColeccion",
 });
 
 // Juegos N--------M Colecciones
 Juegos.belongsToMany(Colecciones, {
-  through: JuegoColeccion,
+  through: "JuegoColeccion",
 });
+
 
 module.exports = {
   Juegos,

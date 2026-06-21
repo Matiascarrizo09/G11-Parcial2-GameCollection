@@ -16,7 +16,7 @@ const Juego = sequelize.define("Juego", {
     allowNull: false,
   },
   fechaLanzamiento: {
-    type: DataTypes.DATE, // Fecha
+    type: DataTypes.DATEONLY, // Fecha sin hora
     allowNull: false,
   },
   genero: {
@@ -32,7 +32,7 @@ const Juego = sequelize.define("Juego", {
     },
   },
   ultimaSesion: {
-    type: DataTypes.DATEONLY, // Fecha
+    type: DataTypes.DATE, // Fecha
     allowNull: true,
   },
   favorito: {

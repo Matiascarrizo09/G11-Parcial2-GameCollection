@@ -14,9 +14,14 @@ const eliminarUsuario = async (req, res) => {
   res.json({ mensaje: `Eliminar usuario ${req.params.id}` });
 };
 
+const actualizarUsuario = async (req, res) => {
+  res.json({ mensaje: `Actualizar usuario ${req.params.id}`});
+};
+
 module.exports = {
   obtenerUsuarios,
   obtenerUsuarioPorId,
   crearUsuario,
-  eliminarUsuario
+  eliminarUsuario,
+  actualizarUsuario
 };

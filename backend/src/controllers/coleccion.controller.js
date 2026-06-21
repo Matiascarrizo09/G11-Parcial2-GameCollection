@@ -14,9 +14,14 @@ const eliminarColeccion = async (req, res) => {
   res.json({ mensaje: `Eliminar colección ${req.params.id}` });
 };
 
+const actualizarColeccion = async (req, res) => {
+  res.json({ mensaje: `Actualizar coleccion ${req.params.id}`});
+};
+
 module.exports = {
   obtenerColecciones,
   obtenerColeccionPorId,
   crearColeccion,
-  eliminarColeccion
+  eliminarColeccion,
+  actualizarColeccion
 };

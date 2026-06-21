@@ -7,5 +7,6 @@ router.get('/', juegoController.obtenerJuegos);
 router.get('/:id', juegoController.obtenerJuegoPorId);
 router.post('/', juegoController.crearJuego);
 router.delete('/:id', juegoController.eliminarJuego);
+router.put('/:id', juegoController.actualizarJuego);
 
 module.exports = router;

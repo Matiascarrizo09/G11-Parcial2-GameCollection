@@ -7,5 +7,6 @@ router.get('/', coleccionController.obtenerColecciones);
 router.get('/:id', coleccionController.obtenerColeccionPorId);
 router.post('/', coleccionController.crearColeccion);
 router.delete('/:id', coleccionController.eliminarColeccion);
+router.put('/:id', coleccionController.actualizarColeccion);
 
 module.exports = router;

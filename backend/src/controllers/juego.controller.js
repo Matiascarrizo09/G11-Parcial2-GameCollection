@@ -14,9 +14,14 @@ const eliminarJuego = async (req, res) => {
   res.json({ mensaje: `Eliminar juego ${req.params.id}` });
 };
 
+const actualizarJuego = async (req, res) => {
+  res.json({ mensaje: `Actualizar juego ${req.params.id}`});
+};
+
 module.exports = {
   obtenerJuegos,
   obtenerJuegoPorId,
   crearJuego,
-  eliminarJuego
+  eliminarJuego,
+  actualizarJuego
 };

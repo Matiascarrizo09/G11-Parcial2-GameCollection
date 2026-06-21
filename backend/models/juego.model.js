@@ -16,7 +16,7 @@ const Juego = sequelize.define("Juego", {
     allowNull: false,
   },
   fechaLanzamiento: {
-    type: DataTypes.DATE, // Fecha
+    type: DataTypes.DATEONLY, // Fecha sin hora
     allowNull: false,
   },
   genero: {
@@ -27,7 +27,9 @@ const Juego = sequelize.define("Juego", {
     type: DataTypes.DECIMAL(4, 1), // Número decimal: 4 dígitos y 1 decimal
     allowNull: false,
     defaultValue: 0.0, // Valor por defecto
-    min: 0.0, // Validación para no permitir valores negativos
+    validate: {
+      min: 0.0, // Validación para no permitir valores negativos
+    },
   },
   ultimaSesion: {
     type: DataTypes.DATE, // Fecha

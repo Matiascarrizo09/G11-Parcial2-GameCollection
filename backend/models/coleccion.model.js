@@ -14,12 +14,6 @@ const Coleccion = sequelize.define("Coleccion", {
   descripcion: {
     type: DataTypes.TEXT,
   },
-  cantidadJuegos: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    defaultValue: 0,
-    min: 0,
-  },
 });
 
 module.exports = Coleccion;

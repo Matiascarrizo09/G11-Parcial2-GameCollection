@@ -40,6 +40,7 @@ Testeo de operaciones CRUD en Postman.
 ### Jeremías Claros
 
 Docker compose.
+Documentación del README.
 
 ### María Rodriguez
 
@@ -76,8 +77,37 @@ G11-Parcial2-GameCollection
 │ ├ package-lock.json
 │ ├ package.json
 │ ├ pnpm-lock.yaml
-│ └ server.js
+│ ├ server.js
+│ └ Dockerfile
 ├ misc
 │ └ Diagrama MER.drawio.svg
+├ docker-compose.yml
 └ README.md
 ```
+
+## Endpoints principales
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| GET    | /api/usuarios | Obtener usuarios |
+| POST   | /api/juegos | Crear un juego |
+| PUT    | /api/colecciones/:id | Actualizar una colección |
+| DELETE | /api/usuarios/:id | Eliminar usuario |
+
+## Docker - Inicio rápido
+
+### Requisitos
+- Docker
+- Docker compose
+
+### Levantar proyecto
+```bash
+docker compose up --build
+```
+
+### Detener proyecto
+```bash
+docker compose down
+```
+
+El proyecto se ejecuta utilizando Docker compose, levantando backend y base de datos con un solo comando.

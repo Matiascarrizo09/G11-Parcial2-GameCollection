@@ -104,15 +104,13 @@ G11-Parcial2-GameCollection
 
 ### Levantar proyecto
 
-```
-bash
+```bash
 docker compose up --build
 ```
 
 ### Detener proyecto
 
-```
-bash
+```bash
 docker compose down
 ```
 

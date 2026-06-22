@@ -61,10 +61,10 @@ Redacción del README.
 G11-Parcial2-GameCollection
 ├ backend
 │ ├ models
-│ │ ├ coleccion.model.ts
-│ │ ├ juego.model.ts
-│ │ ├ relaciones.ts
-│ │ └ usuario.model.ts
+│ │ ├ coleccion.model.js
+│ │ ├ juego.model.js
+│ │ ├ relaciones.js
+│ │ └ usuario.model.js
 │ ├ src
 │ │ ├ config
 │ │ │ └ database.js
@@ -88,26 +88,31 @@ G11-Parcial2-GameCollection
 
 ## Endpoints principales
 
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET    | /api/usuarios | Obtener usuarios |
-| POST   | /api/juegos | Crear un juego |
+| Método | Ruta                 | Descripción              |
+| ------ | -------------------- | ------------------------ |
+| GET    | /api/usuarios        | Obtener usuarios         |
+| POST   | /api/juegos          | Crear un juego           |
 | PUT    | /api/colecciones/:id | Actualizar una colección |
-| DELETE | /api/usuarios/:id | Eliminar usuario |
+| DELETE | /api/usuarios/:id    | Eliminar usuario         |
 
 ## Docker - Inicio rápido
 
 ### Requisitos
+
 - Docker
 - Docker compose
 
 ### Levantar proyecto
-```bash
+
+```
+bash
 docker compose up --build
 ```
 
 ### Detener proyecto
-```bash
+
+```
+bash
 docker compose down
 ```
 

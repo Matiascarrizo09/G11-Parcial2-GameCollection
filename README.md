@@ -35,7 +35,8 @@ Trabajamos con un repositorio remoto en GitHub, cada integrante posee su propia 
 
 Creación del repositorio e instalación de dependencias.
 Rutas y controladores.
-Testeo de operaciones CRUD en Postman.
+Express.
+Integración y prueba de la conexión con PostgreSQL.
 
 ### Jeremías Claros
 

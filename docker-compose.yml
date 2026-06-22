@@ -1,0 +1,25 @@
+services:
+# contenedor de bdd postgreSQL
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: gamecollection
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: parcial
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on: # espera a que la bdd esté creada antes de iniciar
+      - database
+    restart: always # si falla al iniciar docker lo vuelve a hacer hasta que la bdd esté
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_NAME: gamecollection
+      DB_USER: admin
+      DB_PASSWORD: parcial
+      PORT: 3000

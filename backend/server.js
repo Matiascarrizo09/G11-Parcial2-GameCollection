@@ -7,6 +7,7 @@ require('./models/usuario.model');
 require('./models/juego.model');
 require('./models/coleccion.model');
 require('./models/relaciones');
+require("./models/usuarioJuego.model");
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,7 +17,7 @@ async function startServer() {
     await sequelize.authenticate();
     console.log('Base de datos conectada correctamente');
 
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({ force: true });
     console.log('Tablas sincronizadas correctamente');
 
     app.listen(PORT, () => {

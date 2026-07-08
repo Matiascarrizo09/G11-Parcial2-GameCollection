@@ -13,7 +13,7 @@ const Usuario = sequelize.define("Usuario", {
     unique: true,
   },
   contrasenia: {
-    type: DataTypes.STRING(50),
+    type: DataTypes.STRING(60), // 50 -> 60, 60 es la longitud máxima de una contraseña hasheada con bcrypt
     allowNull: false,
   },
   email: {

@@ -42,14 +42,13 @@ const crearUsuario = async (req, res) => {
     // Implementación de bcrypt al crear usuario
     const datosUsuario = {
       ...req.body,
-      contrasenia: await bcrypt.hash(req.body.contrasenia, 10), // Se toma la contraseña ingresada en el json con datos y bcrypt la hashea con un cost factor de 10.
+      contrasenia: await bcrypt.hash(req.body.contrasenia, 10), // Se toma la contraseña ingresada y bcrypt la hashea con un cost factor de 10.
     };
 
     const usuario = await Usuario.create(datosUsuario); // Se evita modificar directamente 'req.body'
 
     res.status(201).json({
-      mensaje: "Usuario creado correctamente",
-      usuario,
+      mensaje: "Usuario creado correctamente con el id: " + usuario.idUsuario,
     });
   } catch (error) {
     res.status(500).json({
@@ -85,7 +84,6 @@ const actualizarUsuario = async (req, res) => {
 
     res.status(200).json({
       mensaje: "Usuario actualizado correctamente",
-      usuario,
     });
   } catch (error) {
     res.status(500).json({

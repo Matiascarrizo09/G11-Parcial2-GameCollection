@@ -1,4 +1,5 @@
 const Usuario = require('../../models/usuario.model');
+const bcrypt = require("bcrypt");
 
 const obtenerUsuarios = async (req, res) => {
   try {
@@ -32,18 +33,29 @@ const obtenerUsuarioPorId = async (req, res) => {
   }
 };
 
+
 const crearUsuario = async (req, res) => {
   try {
-    const usuario = await Usuario.create(req.body);
+
+    const passwordHash = await bcrypt.hash(req.body.contrasenia, 10);
+
+    const usuario = await Usuario.create({
+      ...req.body,
+      contrasenia: passwordHash,
+    });
+
+    const { contrasenia, ...usuarioSinPassword } = usuario.toJSON();
 
     res.status(201).json({
-      mensaje: 'Usuario creado correctamente',
-      usuario
-    });
+      mensaje: "Usuario creado correctamente",
+      usuario: usuarioSinPassword,
+});
+
+
   } catch (error) {
     res.status(500).json({
-      mensaje: 'Error al crear el usuario',
-      error: error.message
+      mensaje: "Error al crear el usuario",
+      error: error.message,
     });
   }
 };

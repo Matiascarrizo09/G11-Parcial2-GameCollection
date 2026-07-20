@@ -2,15 +2,16 @@ const express = require("express");
 const router = express.Router();
 
 const usuarioJuegoController = require("../controllers/usuarioJuego.controller");
+const verificarToken = require("../middlewares/verificarToken");
 
-router.get("/", usuarioJuegoController.obtenerUsuarioJuegos);
+router.get("/", verificarToken, usuarioJuegoController.obtenerUsuarioJuegos);
 
-router.get("/:id", usuarioJuegoController.obtenerUsuarioJuegoPorId);
+router.get("/:id", verificarToken, usuarioJuegoController.obtenerUsuarioJuegoPorId);
 
-router.post("/", usuarioJuegoController.crearUsuarioJuego);
+router.post("/", verificarToken, usuarioJuegoController.crearUsuarioJuego);
 
-router.put("/:id", usuarioJuegoController.actualizarUsuarioJuego);
+router.put("/:id", verificarToken, usuarioJuegoController.actualizarUsuarioJuego);
 
-router.delete("/:id", usuarioJuegoController.eliminarUsuarioJuego);
+router.delete("/:id", verificarToken, usuarioJuegoController.eliminarUsuarioJuego);
 
 module.exports = router;

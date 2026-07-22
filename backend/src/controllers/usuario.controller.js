@@ -3,7 +3,11 @@ const bcrypt = require("bcrypt");
 
 const obtenerUsuarios = async (req, res) => {
   try {
-    const usuarios = await Usuario.findAll();
+    const usuarios = await Usuario.findAll({
+  attributes: {
+    exclude: ["contrasenia"]
+  }
+});
 
     res.status(200).json(usuarios);
   } catch (error) {
@@ -16,7 +20,11 @@ const obtenerUsuarios = async (req, res) => {
 
 const obtenerUsuarioPorId = async (req, res) => {
   try {
-    const usuario = await Usuario.findByPk(req.params.id);
+    const usuario = await Usuario.findByPk(req.params.id, {
+  attributes: {
+    exclude: ["contrasenia"]
+  }
+});
 
     if (!usuario) {
       return res.status(404).json({

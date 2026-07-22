@@ -11,6 +11,7 @@ const login = async (req, res) => {
       where: { email },
     });
 
+
     if (!usuario) {
       return res.status(404).json({
         mensaje: "Usuario no encontrado",
@@ -29,14 +30,28 @@ const login = async (req, res) => {
       });
     }
 
-    res.status(200).json({
-      mensaje: "Login correcto",
-      usuario: {
-        idUsuario: usuario.idUsuario,
-        nombreUsuario: usuario.nombreUsuario,
-        email: usuario.email,
-      },
-    });
+const token = jwt.sign(
+  {
+    idUsuario: usuario.idUsuario,
+    email: usuario.email,
+  },
+  process.env.JWT_SECRET,
+  {
+    expiresIn: "2h",
+  }
+);
+
+console.log("TOKEN:", token);
+
+res.status(200).json({
+  mensaje: "Login correcto",
+  token,
+  usuario: {
+    idUsuario: usuario.idUsuario,
+    nombreUsuario: usuario.nombreUsuario,
+    email: usuario.email,
+  },
+});
 
   } catch (error) {
     res.status(500).json({

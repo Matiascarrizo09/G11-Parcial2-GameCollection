@@ -1,0 +1,17 @@
+[
+  {
+    "idColeccion": 1,
+    "nombre": "Favoritos",
+    "descripcion": "Los mejores juegos de mi biblioteca."
+  },
+  {
+    "idColeccion": 2,
+    "nombre": "Nintendo",
+    "descripcion": "Todos los juegos desarrollados por Nintendo."
+  },
+  {
+    "idColeccion": 3,
+    "nombre": "Pendientes",
+    "descripcion": "Juegos que quiero comenzar próximamente."
+  }
+]

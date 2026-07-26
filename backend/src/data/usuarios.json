@@ -1,0 +1,20 @@
+[
+  {
+    "idUsuario": 1,
+    "nombreUsuario": "Juan",
+    "email": "juan@juegoteca.com",
+    "contrasenia": "HASH_BCRYPT1",
+    "mensaje": "Amante de los videojuegos de Nintendo y de completar el 100% de cada aventura.",
+    "fechaRegistro": "2026-07-20",
+    "horasTotalesJugadas": 842.75
+  },
+  {
+    "idUsuario": 2,
+    "nombreUsuario": "Pedro",
+    "email": "pedro@juegoteca.com",
+    "contrasenia": "HASH_BCRYPT2",
+    "mensaje": "Siempre buscando un nuevo RPG para perder cientos de horas.",
+    "fechaRegistro": "2026-07-18",
+    "horasTotalesJugadas": 512.4
+  }
+]

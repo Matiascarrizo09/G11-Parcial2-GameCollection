@@ -1,0 +1,47 @@
+[
+  {
+    "idJuego": 1,
+    "nombre": "The Legend of Zelda: Tears of the Kingdom",
+    "desarrolladora": "Nintendo",
+    "fechaLanzamiento": "2023-05-12",
+    "genero": "Aventura",
+    "estado": "Completado",
+    "horasJugadas": 185.4
+  },
+  {
+    "idJuego": 2,
+    "nombre": "Super Mario Odyssey",
+    "desarrolladora": "Nintendo",
+    "fechaLanzamiento": "2017-10-27",
+    "genero": "Plataformas",
+    "estado": "Completado",
+    "horasJugadas": 92.8
+  },
+  {
+    "idJuego": 3,
+    "nombre": "Minecraft",
+    "desarrolladora": "Mojang Studios",
+    "fechaLanzamiento": "2011-11-18",
+    "genero": "Sandbox",
+    "estado": "Jugando",
+    "horasJugadas": 756.3
+  },
+  {
+    "idJuego": 4,
+    "nombre": "Portal 2",
+    "desarrolladora": "Valve",
+    "fechaLanzamiento": "2011-04-19",
+    "genero": "Puzles",
+    "estado": "Completado",
+    "horasJugadas": 28.5
+  },
+  {
+    "idJuego": 5,
+    "nombre": "Hollow Knight",
+    "desarrolladora": "Team Cherry",
+    "fechaLanzamiento": "2017-02-24",
+    "genero": "Metroidvania",
+    "estado": "Pendiente",
+    "horasJugadas": 0
+  }
+]

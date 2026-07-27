@@ -23,18 +23,6 @@ const Juego = sequelize.define("Juego", {
     type: DataTypes.STRING(25),
     allowNull: false,
   },
-  horasJugadas: {
-    type: DataTypes.DECIMAL(4, 1), // Número decimal: 4 dígitos y 1 decimal
-    allowNull: false,
-    defaultValue: 0.0, // Valor por defecto
-    validate: {
-      min: 0.0, // Validación para no permitir valores negativos
-    },
-  },
-  ultimaSesion: {
-    type: DataTypes.DATE, // Fecha
-    allowNull: true,
-  },
   favorito: {
     type: DataTypes.BOOLEAN, // Booleano
     allowNull: false,

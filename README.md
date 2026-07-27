@@ -37,6 +37,7 @@ Creación del repositorio e instalación de dependencias.
 Rutas y controladores.
 Express.
 Integración y prueba de la conexión con PostgreSQL.
+Implementación de JWT.
 
 ### Jeremías Claros
 
@@ -54,6 +55,7 @@ Testeo de operaciones CRUD en Postman.
 Modelos de Sequelize.
 Relaciones entre tablas.
 Redacción del README.
+Implementación de bcrypt.
 
 ## Estructura del proyecto
 

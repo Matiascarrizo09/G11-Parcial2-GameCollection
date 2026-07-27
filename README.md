@@ -26,6 +26,8 @@ El proyecto es en una biblioteca de videojuegos al estilo de plataformas como St
 - Nodemon
 - JavaScript
 - Docker
+- Jest + supertest
+- bcrypt
 
 ## Metodología de trabajo
 
@@ -43,6 +45,7 @@ Implementación de JWT.
 
 Docker compose.
 Documentación del README.
+Prueba de integración automatizada con Jest y Supertest.
 
 ### María Rodriguez
 
